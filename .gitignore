@@ -3,3 +3,7 @@ a.out
 
 # Python files
 main.py
+
+# C files
+10-linked_lists.c
+10-main.c
