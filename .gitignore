@@ -4,6 +4,7 @@ a.out
 # Python files
 main.py
 7-main.py
+__pycache__/
 
 # C files
 10-linked_lists.c
