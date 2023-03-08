@@ -4,4 +4,4 @@ def print_last_digit(number):
     if (n < 0):
         n *= -1
     print(n, end="")
-    return n;
+    return n
