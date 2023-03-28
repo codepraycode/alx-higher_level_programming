@@ -91,7 +91,6 @@ class SinglyLinkedList(object):
 
         # If no node, insert the new node at the very end.
         if not head:
-            head = Node(value)
             return
         # If the next node data is greater than the new node value
         # replace the current node with the new node
@@ -125,6 +124,10 @@ class SinglyLinkedList(object):
         Args:
             value(int): Value of node to be inserted
         """
+
+        if not self.__head:
+            self.__head = Node(value)
+            return
 
         # Recursively update list
         return self.__update_singly_list(value, self.__head)
