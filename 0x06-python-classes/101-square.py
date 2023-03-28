@@ -61,14 +61,15 @@ class Square(object):
         """Construct square display"""
         display = ""
         if self.__size == 0:
-            display += '\n'
+            return display
         else:
             for _ in range(self.__position[1]):
                 display += '\n'
-            for _ in range(self.__size):
+            for n in range(self.__size):
                 display += (" " * self.__position[0])
                 display += ("#" * self.__size)
-                display += '\n'
+                if n != self.__size -1:
+                    display += '\n'
         return display
 
     def area(self):
