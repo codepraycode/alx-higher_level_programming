@@ -14,8 +14,8 @@ class Square(object):
             Initializing class and constructing square
 
             Note:
-                - size must be an integer, else a TypeError is raised with a message.
-                - size must be greater than 0, else a ValueError is raised with a message.
+                - size must be an integer, else a TypeError is raised.
+                - size must be greater than 0, else a ValueError is raised.
 
             Args:
                 size(int, optional): The size of square to be constructed
