@@ -3,4 +3,5 @@
 
 
 class Square(object):
+    """Empty Class Square"""
     pass
