@@ -131,4 +131,3 @@ class Square(object):
         Display the square by printing to stdout
         """
         return self.__get_print_display()
-
