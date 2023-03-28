@@ -135,3 +135,4 @@ class SinglyLinkedList(object):
         compilation = self.__compile_singly_list(self.__head)
 
         return "\n".join(compilation)
+
