@@ -75,7 +75,7 @@ class Node(object):
         Returns:
             str: The node's data
         """
-        
+
         return str(self.__data)
 
 
@@ -89,7 +89,7 @@ class SinglyLinkedList(object):
     def __update_singly_list(self, value, head=None):
         """Update the list by inserting node and sorting nodes"""
 
-        # If no node, insert the new node at the very end. 
+        # If no node, insert the new node at the very end.
         if not head:
             head = Node(value)
             return
