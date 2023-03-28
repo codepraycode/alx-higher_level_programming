@@ -14,7 +14,7 @@ class Square(object):
 
         Args:
             size(int, optional): The size of square to be constructed
-        
+
         Raises:
             TypeError: if `size` is an integer.
             ValueError: if `size` is less than 0.
