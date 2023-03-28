@@ -67,7 +67,7 @@ class Square(object):
                 display += ' '
             for _ in range(self.__size):
                 display += (" " * self.__position[0])
-                display += ("#" * self.__size)
+                display += ("#\n" * self.__size)
         return display
 
     def area(self):
