@@ -30,7 +30,7 @@ class Node(object):
         msg = "next_node must be a Node object"
 
         # Validate node is an instance of Node
-        if node and not isinstance(node, self):
+        if node and not isinstance(node, Node):
             raise TypeError(msg)
 
         #: next_node: private class attribute
