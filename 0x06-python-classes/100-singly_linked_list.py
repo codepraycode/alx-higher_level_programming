@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """SingleList and Node of a singly linked list"""
 
+
 class Node(object):
     """A Node class"""
 
@@ -39,7 +40,7 @@ class Node(object):
     def data(self):
         """int: node data"""
         return self.__data
-    
+
     @data.setter
     def data(self, value):
         """Set the data of node
@@ -56,7 +57,7 @@ class Node(object):
     def next_node(self):
         """Node: node data"""
         return self.__next_node
-    
+
     @data.setter
     def next_node(self, node):
         """Set the next_node of node instance
@@ -68,7 +69,7 @@ class Node(object):
             TypeError: if `next_node` is not an instance of Node.
         """
         self.__next_node(node)
-    
+
     def __str__(self):
         """String representation of Node instance
         Returns:
@@ -77,16 +78,17 @@ class Node(object):
         
         return str(self.__data)
 
+
 class SinglyLinkedList(object):
     """A SinglyLinkedList class"""
 
     def __init__(self):
         """Initialize Node class"""
         self.__head = None
-    
+
     def __update_singly_list(self, value, head=None):
         """Update the list by inserting node and sorting nodes"""
-        
+
         # If no node, insert the new node at the very end. 
         if not head:
             head = Node(value)
@@ -110,10 +112,9 @@ class SinglyLinkedList(object):
         """
         if not head:
             return compilation
-        
+
         compilation.append(str(head))
         return self.__compile_singly_list(head.next_node, compilation)
-        
 
     def sorted_insert(self, value):
         """Insert a new node with `value` as data into list
@@ -132,6 +133,5 @@ class SinglyLinkedList(object):
         """
         #: list of str: list of node numbers
         compilation = self.__compile_singly_list(self.__head)
-        
-        return "\n".join(compilation)
 
+        return "\n".join(compilation)
