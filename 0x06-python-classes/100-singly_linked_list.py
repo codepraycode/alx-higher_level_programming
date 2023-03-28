@@ -7,10 +7,10 @@ class Node(object):
 
     def __init__(self, data, next_node=None):
         """Initialize Node class"""
-
         # Validate and set the initialization parameter
         self.__set_data(data)
-        self.__set_next_node(next_node)
+        # Default next_node to None
+        self.__next_node = next_node
 
     def __set_data(self, value):
         """Validate and update node data"""
@@ -31,6 +31,7 @@ class Node(object):
 
         # Validate node is an instance of Node
         if node and not isinstance(node, Node):
+            print(type(node))
             raise TypeError(msg)
 
         #: next_node: private class attribute
@@ -55,10 +56,10 @@ class Node(object):
 
     @property
     def next_node(self):
-        """Node: node data"""
+        """Node: next_node data"""
         return self.__next_node
 
-    @data.setter
+    @next_node.setter
     def next_node(self, node):
         """Set the next_node of node instance
 
@@ -70,6 +71,13 @@ class Node(object):
         """
         self.__set_next_node(node)
 
+    def __str__(self):
+        """String representation of Node instance
+        Returns:
+            int: node data
+        """
+        return str(self.__data)
+
 
 class SinglyLinkedList(object):
     """A SinglyLinkedList class"""
@@ -78,25 +86,34 @@ class SinglyLinkedList(object):
         """Initialize Node class"""
         self.__head = None
 
-    def __update_singly_list(self, value, head=None):
+    def __update_singly_list(self, value, current_node=None):
         """Update the list by inserting node and sorting nodes"""
-
-        # If no node, insert the new node at the very end.
-        if not isinstance(head, Node):
-            return
+        # If no head, create head node and return
+        if self.__head is None:
+            self.__head = Node(value)
+            return self.__head
+        
         # If the next node data is greater than the new node value
         # replace the current node with the new node
         # set the current node to the next_node of the new node
-        if value < head.data:
-            node = Node(value)
+        new_node = Node(value)
+        
+        if new_node.data <= current_node.data:
+            new_node.next_node = current_node
+            # Updating head
+            if current_node is self.__head:
+                self.__head = new_node
             # Swap nodes
-            tmp = head
-            node.next_node = tmp
-            head = node
-            return
-        # Otherwise,
-        # continue the recursion with the next_node of the current head
-        return self.__update_singly_list(value, head.next_node)
+            return new_node
+
+        # Otherwise is greater, so adding to the end of the list
+        if current_node.next_node is None:
+            current_node.next_node = new_node
+
+        else:
+            current_node.next_node = self.__update_singly_list(value, current_node.next_node)
+
+        return current_node
 
     def __compile_singly_list(self, head, compilation=[]):
         """Recursively compile the list data and return
@@ -104,7 +121,6 @@ class SinglyLinkedList(object):
             str: A compilation of the instance nodes data
         """
         if not isinstance(head, Node):
-            print("No Head", head)
             return compilation
 
         compilation.append(str(head.data))
@@ -117,13 +133,8 @@ class SinglyLinkedList(object):
         Args:
             value(int): Value of node to be inserted
         """
-
-        if not self.__head:
-            self.__head = Node(value)
-            return
-
         # Recursively update list
-        return self.__update_singly_list(value, self.__head)
+        self.__update_singly_list(value, self.__head)
 
     def __str__(self):
         """Print the entire SinglyLinkedList
@@ -131,6 +142,5 @@ class SinglyLinkedList(object):
         """
         #: list of str: list of node numbers
         compilation = self.__compile_singly_list(self.__head)
-        print(compilation)
-        return "\n".join(compilation)
 
+        return "\n".join(compilation)
