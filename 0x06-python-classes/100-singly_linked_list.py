@@ -114,6 +114,8 @@ class SinglyLinkedList(object):
             return compilation
 
         compilation.append(str(head))
+        print(f"Head: {head}")
+        print(compilation)
         return self.__compile_singly_list(head.next_node, compilation)
 
     def sorted_insert(self, value):
@@ -133,6 +135,5 @@ class SinglyLinkedList(object):
         """
         #: list of str: list of node numbers
         compilation = self.__compile_singly_list(self.__head)
-        print("Compilation", compilation)
         return "\n".join(compilation)
 
