@@ -3,7 +3,7 @@
 
 
 class Square(object):
-    """A Square class to be instantiated with a size"""
+    """A Square class"""
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializing class and constructing square
