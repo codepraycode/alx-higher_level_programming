@@ -20,7 +20,6 @@ class Square(object):
             ValueError: if `size` is less than 0.
         """
         self.size = size
-        
 
     def area(self):
         """Square area method
@@ -37,11 +36,11 @@ class Square(object):
     def size(self):
         """str: size of square"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Setter for size of Square instance
-        
+
         Args:
             value(int): The new size of square
 
