@@ -27,7 +27,7 @@ class Square(object):
         Calculate the area of the square instance
 
         Returns:
-            int: Calculated area of the square instance
+            int: current area of the square instance
 
         """
         return self.__size ** 2
