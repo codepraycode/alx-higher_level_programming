@@ -133,5 +133,5 @@ class SinglyLinkedList(object):
         """
         #: list of str: list of node numbers
         compilation = self.__compile_singly_list(self.__head)
-
+        print ("compilation", compilation)
         return "\n".join(compilation)
