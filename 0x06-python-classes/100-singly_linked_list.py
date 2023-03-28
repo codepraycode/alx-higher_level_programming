@@ -68,7 +68,7 @@ class Node(object):
         Raises:
             TypeError: if `next_node` is not an instance of Node.
         """
-        self.__next_node(node)
+        self.__set_next_node(node)
 
 
 class SinglyLinkedList(object):
