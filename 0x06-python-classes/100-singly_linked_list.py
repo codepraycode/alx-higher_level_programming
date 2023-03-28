@@ -63,7 +63,7 @@ class Node(object):
         """Set the next_node of node instance
 
         Args:
-            node(node): Next node to set node's next_node.
+            node(Node): Next node to set node's next_node.
 
         Raises:
             TypeError: if `next_node` is not an instance of Node.
