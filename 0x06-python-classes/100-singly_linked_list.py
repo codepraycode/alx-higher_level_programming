@@ -70,14 +70,6 @@ class Node(object):
         """
         self.__next_node(node)
 
-    def __str__(self):
-        """String representation of Node instance
-        Returns:
-            str: The node's data
-        """
-
-        return str(self.__data)
-
 
 class SinglyLinkedList(object):
     """A SinglyLinkedList class"""
@@ -90,7 +82,7 @@ class SinglyLinkedList(object):
         """Update the list by inserting node and sorting nodes"""
 
         # If no node, insert the new node at the very end.
-        if not head:
+        if not head and not isinstance(head, Node):
             return
         # If the next node data is greater than the new node value
         # replace the current node with the new node
@@ -114,7 +106,7 @@ class SinglyLinkedList(object):
         if not head:
             return compilation
 
-        compilation.append(str(head))
+        compilation.append(str(head.data))
         print(f"Head: {head}")
         print(compilation)
         return self.__compile_singly_list(head.next_node, compilation)
