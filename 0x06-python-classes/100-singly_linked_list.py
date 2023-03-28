@@ -97,7 +97,9 @@ class SinglyLinkedList(object):
         # set the current node to the next_node of the new node
         if value < head.data:
             node = Node(value)
-            node.next_node = head
+            # Swap nodes
+            tmp = head
+            node.next_node = tmp
             head = node
             return
         # Otherwise,
