@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-    Empty Square class
-"""
+"""Empty Square class"""
 
 
 class Square(object):
