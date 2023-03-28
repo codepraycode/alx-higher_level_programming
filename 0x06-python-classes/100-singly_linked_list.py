@@ -92,12 +92,12 @@ class SinglyLinkedList(object):
         if self.__head is None:
             self.__head = Node(value)
             return self.__head
-        
+
         # If the next node data is greater than the new node value
         # replace the current node with the new node
         # set the current node to the next_node of the new node
         new_node = Node(value)
-        
+
         if new_node.data <= current_node.data:
             new_node.next_node = current_node
             # Updating head
@@ -111,7 +111,8 @@ class SinglyLinkedList(object):
             current_node.next_node = new_node
 
         else:
-            current_node.next_node = self.__update_singly_list(value, current_node.next_node)
+            current_node.next_node = self.__update_singly_list(
+                value, current_node.next_node)
 
         return current_node
 
