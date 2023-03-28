@@ -35,15 +35,15 @@ class Square(object):
         """Validates and update the size of square"""
 
         # Validate value is an integer
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
 
         # Validate value is greater than 0
-        if size < 0:
+        if value < 0:
             raise TypeError("size must be >= 0")
 
         #: int: private class attribute
-        self.__size = size
+        self.__size = value
 
     @property
     def size(self):
