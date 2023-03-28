@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Square class with a size"""
 
-
 class Square(object):
     """A Square class to be instantiated with a size"""
 
@@ -19,7 +18,7 @@ class Square(object):
             TypeError: if `size` is an integer.
             ValueError: if `size` is less than 0.
         """
-        self.size = size
+        self.__set_size(size)
 
     def area(self):
         """Square area method
@@ -31,6 +30,20 @@ class Square(object):
 
         """
         return self.__size ** 2
+
+    def __set_size(self, value):
+        """Validates and update the size of square"""
+
+        # Validate value is an integer
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+
+        # Validate value is greater than 0
+        if size < 0:
+            raise TypeError("size must be >= 0")
+
+        #: int: private class attribute
+        self.__size = size
 
     @property
     def size(self):
@@ -48,11 +61,4 @@ class Square(object):
             TypeError: if `size` is an integer.
             ValueError: if `size` is less than 0.
         """
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise TypeError("size must be >= 0")
-
-        #: int: private class attribute
-        self.__size = size
+        self.__set_size(value)
