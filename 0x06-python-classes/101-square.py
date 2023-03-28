@@ -56,6 +56,19 @@ class Square(object):
 
         #: int: private class attribute
         self.__position = value
+    
+    def __get_print_display(self):
+        """Construct square display"""
+        display = ""
+        if self.__size == 0:
+            display += '\n'
+        else:
+            for _ in range(self.__position[1]):
+                display += '\n'
+            for _ in range(self.__size):
+                display += (" " * self.__position[0])
+                display += ("#" * self.__size)
+        return display
 
     def area(self):
         """Square area method
@@ -74,14 +87,7 @@ class Square(object):
         Note:
             if `size` is 0, an empty line is printed.
         """
-        if self.__size == 0:
-            print()
-        else:
-            for _ in range(self.__position[1]):
-                print()
-            for _ in range(self.__size):
-                print(" " * self.__position[0], end="")
-                print("#" * self.__size)
+        print(self.__get_print_display())
 
     @property
     def size(self):
@@ -122,5 +128,5 @@ class Square(object):
         """Print the Square instance
         Display the square by printing to stdout
         """
-        self.my_print()
-        return ""
+        return self.__get_print_display()
+
