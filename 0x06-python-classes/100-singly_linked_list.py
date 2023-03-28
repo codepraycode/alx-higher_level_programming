@@ -82,7 +82,7 @@ class SinglyLinkedList(object):
         """Update the list by inserting node and sorting nodes"""
 
         # If no node, insert the new node at the very end.
-        if not head and not isinstance(head, Node):
+        if not isinstance(head, Node):
             return
         # If the next node data is greater than the new node value
         # replace the current node with the new node
