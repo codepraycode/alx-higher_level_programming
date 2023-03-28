@@ -37,12 +37,11 @@ class Square(object):
         #: int: private class attribute
         self.__size = value
 
-
     def __set_position(self, value):
         """Validates and update the position of square"""
         #: str: default message for exception
         msg = "position must be a tuple of 2 positive integers"
-        
+
         # Validate value is a tuple
         if not isinstance(value, tuple):
             raise TypeError(msg)
