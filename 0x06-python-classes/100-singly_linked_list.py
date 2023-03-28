@@ -103,7 +103,7 @@ class SinglyLinkedList(object):
         Returns:
             str: A compilation of the instance nodes data
         """
-        if not head:
+        if not isinstance(head, Node):
             return compilation
 
         compilation.append(str(head.data))
