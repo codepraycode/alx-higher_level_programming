@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square class with a size"""
 
+
 class Square(object):
     """A Square class to be instantiated with a size"""
 
