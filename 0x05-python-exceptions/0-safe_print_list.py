@@ -6,3 +6,4 @@ def safe_print_list(my_list=[], x=0):
         print(e, end="")
     print()
     return number_of_real_elements
+
