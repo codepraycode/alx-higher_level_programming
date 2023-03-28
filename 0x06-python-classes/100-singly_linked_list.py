@@ -104,6 +104,7 @@ class SinglyLinkedList(object):
             str: A compilation of the instance nodes data
         """
         if not isinstance(head, Node):
+            print("No Head", head)
             return compilation
 
         compilation.append(str(head.data))
