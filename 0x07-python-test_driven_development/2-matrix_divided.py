@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function to add integers
+"""Function that divides all elements of a matrix.
     Prototye: def matrix_divided(matrix, div)
 
         Args:
