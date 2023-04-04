@@ -3,14 +3,14 @@
     Prototye: def matrix_divided(matrix, div)
 
         Args:
-            matrix ([[(int,floats)]]): List of lists of integer/float
+            matrix (list): List of lists of integer/float
             div (int, float): value to divide elements of matrix by
 
         Raises:
             TypeError: There are differenct cases
-                case1: if matrix is not a list of list of integer/float
+                case1: if matrix is not a list of lists of integer/float
                     expected message should be:
-                    `matrix must be a matrix (list of lists) of integers/floats
+                    `matrix must be a matrix (list of lists) of integers/floats`
                 case2: if each row in matrix is not of same size
                     expected message should be:
                     `Each row of the matrix must have the same size`
