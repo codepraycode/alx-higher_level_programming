@@ -1,0 +1,59 @@
+Test for add_integer function
+
+Import module to read command line arguments
+>>> import sys
+>>> sys.path.insert(1, '../')
+>>> lib = __import__("0-add_integer")
+>>> add_integer = lib.add_integer
+
+# Test addition function
+>>> add_integer(0)
+98
+>>> add_integer(-1)
+97
+>>> add_integer(10.5)
+108
+
+# Type for errors
+>>> add_integer(10+5j)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer([])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer({})
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(set())
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer("")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# Test for two inputs for type errors
+>>> add_integer(10, 10+5j)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(10, [])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(10, {})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(10, set())
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(10, "")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
