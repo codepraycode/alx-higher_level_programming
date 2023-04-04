@@ -39,7 +39,7 @@
 """
 
 
-def text_indentation(text):
+def matrix_mul(m_a, m_b):
     """Multiplies two matrices and return result of the operation
         matrices `m_a` and `m_b`
 
