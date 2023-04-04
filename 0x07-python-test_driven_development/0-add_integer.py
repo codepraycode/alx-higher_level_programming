@@ -17,6 +17,20 @@
 
 
 def add_integer(a, b=98):
+    """Add two integers
+
+    Args:
+        a(int, float): First integer
+        b(int, float, optional): second integer, defaults to 98
+
+    Raises:
+        TypeError: if a or b is not an integer or float
+            expected message should be:
+            `a must be an integer` or `b must be an integer`
+
+    Returns:
+        int: the addition of given arguments
+    """
 
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
