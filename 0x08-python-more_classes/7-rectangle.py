@@ -131,7 +131,7 @@ class Rectangle(object):
             return ""
         # hash lines of rectangle
         _symbol = str(self.print_symbol)
-        lines = [ _symbol * self.width for _ in range(self.height)]
+        lines = [_symbol * self.width for _ in range(self.height)]
         return "\n".join(lines)
 
     def __repr__(self):
