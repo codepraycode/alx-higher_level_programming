@@ -120,7 +120,7 @@ class Rectangle(object):
             return 0
 
         return (self.width * 2) + (self.height * 2)
-    
+
     # ===== Magic Methods =======
     def __str__(self):
         f"""Printable version of the instance with `{self.print_symbol}`
@@ -147,7 +147,7 @@ class Rectangle(object):
         print("Bye rectangle...")
         # decrement number of instances
         type(self).number_of_instances -= 1
-    
+
     # ===== Static Methods =======
     def bigger_or_equal(rect_1, rect_2):
         """Returns the bigger rectangle based of area
@@ -159,9 +159,11 @@ class Rectangle(object):
         Raises:
             TypeError: There are different cases
                 case 2: if rect_1 is not an instance of Rectangle class
-                    expected message could be `rect_1 must be an instance of Rectangle`
+                    expected message could be
+                        `rect_1 must be an instance of Rectangle`
                 case 2: if rect_2 is not an instance of Rectangle class
-                    expected message could be `rect_2 must be an instance of Rectangle`
+                    expected message could be
+                        `rect_2 must be an instance of Rectangle`
 
         Returns: rect_1 if rect_1 area is greater than rect_2 area
             otherwise rect_2. If they are the same, returns rect_1.
