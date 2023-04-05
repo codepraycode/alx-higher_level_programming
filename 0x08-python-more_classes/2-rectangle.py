@@ -87,6 +87,10 @@ class Rectangle(object):
 
         self.__height = value
 
+    def __dimension(self):
+        """ tuple: a tuple of width and height"""
+        return (self.width, self.height)
+
     # ======= Instance Methods =========
     def area(self):
         """Get the calculated area of the rectangle instance
@@ -107,7 +111,7 @@ class Rectangle(object):
             int: calculated perimeter of the rectangle
         """
 
-        if self.width == 0 or self.height == 0:
+        if any(e == 0 for e in self.__dimension):
             return 0
 
         return (self.width * 2) + (self.height * 2)
