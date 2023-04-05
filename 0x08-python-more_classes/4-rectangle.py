@@ -123,7 +123,7 @@ class Rectangle(object):
         # hash lines of rectangle
         lines = ["#" * self.width for _ in range(self.height)]
         return "\n".join(lines)
-    
+
     def __repr__(self):
         """Representation of the rectangle instance
 
