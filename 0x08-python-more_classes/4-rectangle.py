@@ -125,7 +125,7 @@ class Rectangle(object):
         return "\n".join(lines)
     
     def __repr__(self):
-        """Representation of the rectangle instance 
+        """Representation of the rectangle instance
 
         Returns: a string to recreate a new instance by using eval()
         """
