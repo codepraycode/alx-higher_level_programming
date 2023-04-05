@@ -114,4 +114,4 @@ class Rectangle(object):
         if any(e == 0 for e in self.__dimension):
             return 0
 
-        return 2 * (self.width + self.height)
+        return (self.width * 2) + (self.height * 2)
