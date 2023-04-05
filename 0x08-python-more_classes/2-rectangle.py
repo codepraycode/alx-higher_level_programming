@@ -87,10 +87,6 @@ class Rectangle(object):
 
         self.__height = value
 
-    def __dimension(self):
-        """ tuple: a tuple of width and height"""
-        return (self.width, self.height)
-
     # ======= Instance Methods =========
     def area(self):
         """Get the calculated area of the rectangle instance
