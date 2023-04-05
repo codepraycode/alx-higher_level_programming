@@ -118,6 +118,6 @@ class Rectangle(object):
 
         if self.width == 0 or self.height == 0:
             return ""
-        # hash lines of rectangle        
+        # hash lines of rectangle
         lines = ["#" * self.width for _ in range(self.height)]
         return "\n".join(lines)
