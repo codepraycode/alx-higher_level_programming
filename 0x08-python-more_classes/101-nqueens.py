@@ -82,9 +82,9 @@ class Queen(object):
         while(q_pos[q_i] < len(q_pos) - 1):
             q_pos[q_i] += 1
 
-            if __is_safe(q_pos, q_i) is True:
+            if self.__is_safe(q_pos, q_i) is True:
                 if q_i is not len(q_pos):
-                    return self.__backtracking(q_pos, q_i + 1)
+                    self.__backtracking(q_pos, q_i + 1)
 
     def __is_safe(self, q_pos, q_i):
         """Checks if queens can check each other.
@@ -125,7 +125,7 @@ class Queen(object):
             N(int, optional): defaults to instance value of N
         """
         try:
-            self.N = N
+            self.N = N if N is not None else self.N
         except (TypeError, ValueError) as error:
             print(error)
             sys.exit(1)
