@@ -85,7 +85,7 @@ class Queen(object):
             if __is_safe(q_pos, q_i) is True:
                 if q_i is not len(q_pos):
                     return self.__backtracking(q_pos, q_i + 1)
-    
+
     def __is_safe(self, q_pos, q_i):
         """Checks if queens can check each other.
 
