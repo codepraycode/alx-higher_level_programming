@@ -56,7 +56,7 @@ class Queen(object):
         # ===== Check TypeError =====
         try:
             value = int(value)
-        except:
+        except Exception:
             raise TypeError("N must be a number")
         # ===== Check ValueError =====
         if value < 4:
