@@ -118,7 +118,7 @@ class Queen(object):
         print(_response)
 
     # ===== Static Methods =======
-    def solve(N=None):
+    def solve(self, N=None):
         """Soves the challenge using backtracking algorithm
 
         Args:
