@@ -29,7 +29,7 @@ def append_after(filename="", search_string="", new_string=""):
 
             if search_string in each_line:
                 new_content += new_string
-        
+
         # Go to the beginning of the file
         file.seek(0)
         file.write(new_content)  # write content.
