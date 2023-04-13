@@ -2,6 +2,7 @@
 """Rectangle class, a sub-class of BaseGeometry class"""
 import BaseGeometry from 7-base_geometry
 
+
 class Rectangle(BaseGeometry):
     """Rectangle class, a sub-class of BaseGeometry class"""
 
@@ -14,11 +15,10 @@ class Rectangle(BaseGeometry):
         Args:
             width(int): Width of rectangle instance
             height(int): Height of rectangle instance
-        
         """
 
-        self.integer_validator('width', width):
+        self.integer_validator('width', width)
         self.__width = width
 
-        self.integer_validator('height', height):
+        self.integer_validator('height', height)
         self.__height = height
