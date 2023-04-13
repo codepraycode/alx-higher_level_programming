@@ -30,4 +30,4 @@ class Square(Rectangle):
         """Returns a prinatable representation of the instance
         like [Square] <width>/<height>
         """
-        return "[Square] {:d}/{:d}".format(self.__width, self.__height)
+        return "[Square] {0:d}/{0:d}".format(self.__width, self.__height)
