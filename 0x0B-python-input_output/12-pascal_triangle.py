@@ -25,14 +25,21 @@ def pascal_triangle(n):
         if len(_triangle) == n:
             break
 
-        _base = _triangle[-1]
+        _base = _triangle[-1] # base of triangle
+        # template, all new values will be inserted in between
         _new_base = [1, 1]
 
+        # check if it is not [1]; otherwise return [1, 1]
         if len(_base) > 1:
-            for ee in range(1, len(_base)):
-                _sum = _base[ee - 1] + _base[ee]
+            # Start from second index and calculate with previous value
+            for val_index in range(1, len(_base)):
+                _sum = _base[val_index - 1] + _base[val_index]
+                # Adds _sum value as second to the last value in _new_base
                 _new_base.insert(-1, _sum)
+                # continues like that till _base is exhausted
 
+        # _new_base might not change
+        #   if the previous base was [1]
         _triangle.append(_new_base)
     
     return _triangle
