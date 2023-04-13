@@ -15,7 +15,7 @@ def pretty_print(size, code_dict):
         if (value != 0):
             print("{}: {}".format(key, value))
 
-def main():
+if __name__ == "__main__":
     """Script entry point to print the parsed data"""
     size = 0
     code_map = {
@@ -50,7 +50,3 @@ def main():
     except KeyboardInterrupt:
         pretty_print(size, code_map)
         raise
-
-
-if __name__ == "__main__":
-    main()
