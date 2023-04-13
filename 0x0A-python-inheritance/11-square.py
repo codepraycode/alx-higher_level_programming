@@ -2,11 +2,9 @@
 """Square  class, a sub-class of Rectangle class"""
 
 
-Rectangle = __import__('9-rectangle').Rectangle
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+PrevSquareClass = __import__('10-square').Square
 
-
-class Square(Rectangle):
+class Square(PrevSquareClass):
     """Square class, a sub-class of Rectangle class"""
 
     def __init__(self, size):
@@ -18,9 +16,7 @@ class Square(Rectangle):
         Args:
             size(int): size of Square instance
         """
-
-        BaseGeometry.integer_validator(self, 'size', size)
-        self.__size = size
+        super().__init__(size)
 
     def area(self):
         """Returns a calculated area of the instance"""
@@ -30,4 +26,4 @@ class Square(Rectangle):
         """Returns a prinatable representation of the instance
         like [Square] <width>/<height>
         """
-        return "[Square] {0:d}/{0:d}".format(self.__width, self.__height)
+        return "[Square] {0:d}/{0:d}".format(self.__size)
