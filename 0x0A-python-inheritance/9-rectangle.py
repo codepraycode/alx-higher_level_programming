@@ -29,12 +29,8 @@ class Rectangle(BaseGeometry):
         """Returns a calculated area of the instance"""
         return self.__width * self.__height
 
-    def print(self):
-        """Returns a string representation of the instance
+    def __str__(self):
+        """Returns a prinatable representation of the instance
         like [Rectangle] <width>/<height>
         """
-        print(self)
-
-    def __str__(self):
-        """Returns a printable representation of the instance"""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
