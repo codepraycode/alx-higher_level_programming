@@ -29,14 +29,14 @@ class Student(object):
             dict: __dict__ property of instnace
         """
 
-        if not attrs:
+        if attrs is None:
             return self.__dict__
 
         _res = {}
 
         for each in attrs:
             val = self.__dict__.get(each)
-            if val:
+            if val is not None:
                 _res[each] = val
 
         return _res
