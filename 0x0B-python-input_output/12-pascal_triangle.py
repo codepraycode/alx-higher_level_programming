@@ -25,7 +25,7 @@ def pascal_triangle(n):
         if len(_triangle) == n:
             break
 
-        _base = _triangle[-1] # base of triangle
+        _base = _triangle[-1]  # base of triangle
         # template, all new values will be inserted in between
         _new_base = [1, 1]
 
@@ -41,5 +41,5 @@ def pascal_triangle(n):
         # _new_base might not change
         #   if the previous base was [1]
         _triangle.append(_new_base)
-    
+
     return _triangle
