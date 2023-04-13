@@ -14,7 +14,7 @@
 """
 
 
-def add_attribute(obj):
+def add_attribute(obj, key, value):
     """Function to add attribute to an object if possible,
     otherwise throws exception.
 
@@ -27,8 +27,8 @@ def add_attribute(obj):
         TypeError: if the object can't have new attribute
             exception message could be `can't add new attribute`
     """
-    
+
     if not hasattr(obj, '__dict__'):
         raise TypeError("can't add new attribute")
-    
+
     setattr(obj, key, value)
