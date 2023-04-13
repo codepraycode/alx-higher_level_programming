@@ -26,13 +26,15 @@ def pascal_triangle(n):
             break
 
         _base = _triangle[-1]
-        _new_base = [1]
+        _new_base = [1, 1]
 
-        for ee in range(0, len(_base), 2):
-            _sum = _base[ee - 1] + _base[ee]
-            _new_base.append(_sum)
-        
-        _new_base.append(1)
+        for ee in range(0, len(_base) - 1, 2):
+            _sum = (_base[ee - 1] + _base[ee])
+            _new_base.insert(-1, _sum)
+
+            _sum = (_base[ee + 1] + _base[ee])
+            _new_base.insert(-1, _sum)
+
         _triangle.append(_new_base)
     
     return _triangle
