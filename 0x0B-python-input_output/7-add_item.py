@@ -19,7 +19,7 @@ _arg_count = len(sys.argv)
 # list: List of files
 file_lists = []
 
-if path.exist(filename):
+if path.exists(FILE_NAME):
     file_lists = load_from_json_file(FILE_NAME)
 
 if _arg_count == 1:
