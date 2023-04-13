@@ -4,6 +4,7 @@
 
 PrevSquareClass = __import__('10-square').Square
 
+
 class Square(PrevSquareClass):
     """Square class, a sub-class of Rectangle class"""
 
