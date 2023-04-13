@@ -34,7 +34,7 @@ class Rectangle(BaseGeometry):
         like [Rectangle] <width>/<height>
         """
         print(self)
-    
+
     def __str__(self):
         """Returns a printable representation of the instance"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
