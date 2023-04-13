@@ -14,7 +14,7 @@ class MyInt(int):
         """
         return super().__ne__(n)
 
-    def __nq__(self, n):
+    def __ne__(self, n):
         """Inverting != operation
         Args:
             n(int): other operand
