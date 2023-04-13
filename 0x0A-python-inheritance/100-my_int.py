@@ -12,11 +12,11 @@ class MyInt(int):
         Args:
             n(int): other operand
         """
-        super().__ne__(n)
+        return super().__ne__(n)
 
     def __nq__(self, n):
         """Inverting != operation
         Args:
             n(int): other operand
         """
-        super().__eq__(n)
+        return super().__eq__(n)
