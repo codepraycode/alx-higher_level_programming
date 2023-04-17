@@ -21,13 +21,13 @@ class Rectangle:
         self.height = height
         self.x = x
         self.y = y
-    
+
     # ======= GETTERS AND SETTERS ======================
     @property
     def width(self):
         """get the value of width"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """value(int): set the value of width"""
@@ -37,7 +37,7 @@ class Rectangle:
     def height(self):
         """get the value of height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """value(int): set the value of height"""
@@ -47,7 +47,7 @@ class Rectangle:
     def x(self):
         """get the value of x"""
         return self.__x
-    
+
     @height.setter
     def x(self, value):
         """value(int): set the value of x"""
@@ -57,7 +57,7 @@ class Rectangle:
     def y(self):
         """get the value of y"""
         return self.__y
-    
+
     @height.setter
     def y(self, value):
         """value(int): set the value of y"""
