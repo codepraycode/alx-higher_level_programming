@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Rectangle base class"""
-
+import Base
 
 class Rectangle:
     """Rectangle base class"""
