@@ -2,6 +2,7 @@
 """Rectangle base class"""
 import Base
 
+
 class Rectangle(Base):
     """Rectangle base class"""
 
