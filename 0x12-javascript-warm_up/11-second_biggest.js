@@ -6,7 +6,7 @@ let sum = 0;
 // A script to print.
 if (argvL > 1) {
   for (const each of argv.slice(2)) {
-	  sum += parseInt(each);
+    sum += parseInt(each);
   }
 }
 
