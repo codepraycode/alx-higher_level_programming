@@ -9,3 +9,6 @@ __pycache__/
 # C files
 10-linked_lists.c
 10-main.c
+
+# Test files
+*-main.js
