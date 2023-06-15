@@ -2,9 +2,9 @@
 
 let index = 0;
 
-function logMe(item) {
-	console.log(`${index}: ${item}`);
-	index++;
+function logMe (item) {
+  console.log(`${index}: ${item}`);
+  index++;
 }
 
 module.exports = { logMe };

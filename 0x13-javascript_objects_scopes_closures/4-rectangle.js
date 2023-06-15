@@ -8,7 +8,7 @@ class Rectangle {
     }
   }
 
-  print (chr='X') {
+  print (chr = 'X') {
     for (let i = 0; i < this.height; i++) {
       let str = '';
 
