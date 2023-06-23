@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""A script to select states from DB"""
+"""
+Displays all values in the states table of
+hbtn_0e_0_usa where name matches the argument.
+"""
 import MySQLdb as mysql
 from sys import argv
 
@@ -11,7 +14,7 @@ DB_PORT = 3306
 if __name__ == "__main__":
     # run when not imported
     # Read arguments
-    _, user, password, db_name = argv
+    _, user, password, db_name, searched = argv
 
     try:
         db = mysql.connect(host=DB_HOST, port=DB_PORT, user=user,
@@ -22,7 +25,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
+    cursor.execute("SELECT * FROM states WHERE name = BINARY '{:s}' \
+                    ORDER BY id ASC;".format(searched))
 
     result_query = cursor.fetchall()
 
