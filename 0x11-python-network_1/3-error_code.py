@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A python scripts that sends a request to the URL and displays the body of the response
+A python scripts that sends a request to the URL and
+displays the body of the response
 (decoded in utf-8).
 """
 

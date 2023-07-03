@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A python script that sends a request to the URL and displays the value of the variable X-Request-Id
+A python script that sends a request to the URL and
+displays the value of the variable X-Request-Id
 in the response header"""
 
 if __name__ == '__main__':
