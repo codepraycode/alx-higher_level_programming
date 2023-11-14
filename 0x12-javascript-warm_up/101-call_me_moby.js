@@ -2,8 +2,8 @@
 
 function callMeMoby (x, func) {
   for (let i = 0; i < x; i++) {
-    func();
+    func()
   }
 }
 
-module.exports = { callMeMoby };
+module.exports = { callMeMoby }

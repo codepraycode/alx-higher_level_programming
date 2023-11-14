@@ -1,18 +1,18 @@
 #!/usr/bin/node
 
-const argv = process.argv;
+const argv = process.argv
 
 // A script to print.
-const num = parseInt(argv[2]);
+const num = parseInt(argv[2])
 
 if (isNaN(num)) {
-  console.log('Missing size');
+  console.log('Missing size')
 } else {
   for (let i = 0; i < num; i++) {
-    let str = '';
+    let str = ''
     for (let j = 0; j < num; j++) {
-      str += 'X';
+      str += 'X'
     }
-    console.log(str);
+    console.log(str)
   }
 }
