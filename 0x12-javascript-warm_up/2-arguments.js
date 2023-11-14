@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const argvL = process.argv.length - 2
 
 // A script to print.
