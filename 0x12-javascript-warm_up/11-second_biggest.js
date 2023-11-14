@@ -1,13 +1,13 @@
 #!/usr/bin/node
+
 const argvL = process.argv.length - 2
 const argv = process.argv
-let sum = 0
 
-// A script to print.
 if (argvL > 1) {
-  for (const each of argv.slice(2)) {
-    sum += parseInt(each)
-  }
+  const ans = [...argv.slice(2)].sort().reverse()[1]
+  console.log(ans)
+} else if (argvL === 1) {
+  console.log(1)
+} else {
+  console.log(0)
 }
-
-console.log(sum)
