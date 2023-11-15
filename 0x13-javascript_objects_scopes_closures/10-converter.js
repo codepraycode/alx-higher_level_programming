@@ -2,8 +2,8 @@
 
 function converter (base) {
   return function (number) {
-    return number.toString(base);
-  };
+    return number.toString(base)
+  }
 }
 
-module.exports = { converter };
+module.exports = { converter }

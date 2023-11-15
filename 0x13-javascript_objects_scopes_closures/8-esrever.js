@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
 function esrever (list) {
-  const res = [];
+  const res = []
 
   for (const each of list) {
-    res.unshift(each);
+    res.unshift(each)
   }
 
-  return res;
+  return res
 }
 
-module.exports = { esrever };
+module.exports = { esrever }

@@ -1,18 +1,18 @@
 #!/usr/bin/node
 
-const dict = require('./101-data').dict;
+const dict = require('./101-data').dict
 
-const newDict = {};
+const newDict = {}
 
 Object.entries(dict).forEach(function (entry) {
-  const [userId, occurence] = entry;
+  const [userId, occurence] = entry
 
   if (!Array.isArray(newDict[occurence])) {
-    newDict[occurence] = [userId];
+    newDict[occurence] = [userId]
   } else {
-    newDict[occurence].push(userId);
+    newDict[occurence].push(userId)
   }
-});
+})
 
-console.log(dict);
-console.log(newDict);
+console.log(dict)
+console.log(newDict)
