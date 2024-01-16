@@ -3,6 +3,7 @@
 import MySQLdb as mysql
 from sys import argv
 
+
 DB_NAME = "hbtn_0e_0_usa"
 DB_HOST = 'localhost'
 DB_PORT = 3306
